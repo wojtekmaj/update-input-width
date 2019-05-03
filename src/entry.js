@@ -1,4 +1,8 @@
 export default function updateInputWidth(element) {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   const { font } = window.getComputedStyle(element);
   const text = element.value || element.placeholder;
 
