@@ -2,8 +2,8 @@
   "name": "update-input-width",
   "version": "1.0.1",
   "description": "A function that given input element, updates its width to fit its content.",
-  "main": "dist/entry.js",
-  "es6": "src/entry.js",
+  "main": "dist/index.js",
+  "es6": "src/index.js",
   "scripts": {
     "build": "babel src -d dist --ignore **/__tests__",
     "prepublishOnly": "yarn run build",
