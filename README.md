@@ -8,6 +8,66 @@ A function that given input element, updates its width to fit its content.
 * Import by adding `import updateInputWidth from 'update-input-width'`.
 * Pass input element to it. Forget.
 
+## User guide
+
+### `updateInputWidth(element: HTMLInputElement)`
+
+A function that given input element, updates its width to fit its content by setting inline `width` CSS property.
+
+#### Sample result
+
+```js
+42
+```
+
+#### Usage
+
+```js
+import updateInputWidth from 'update-input-width';
+```
+
+or
+
+```js
+import { updateInputWidth } from 'update-input-width';
+```
+
+### `getFontShorthand(element: HTMLElement)`
+
+A function that given HTML element returns font CSS shorthand property. Equal to Chrome-only code:
+
+```js
+window.getComputedStyle(element).font
+```
+
+#### Sample result
+
+```js
+"normal normal 600 normal 20px / 25px Arial, sans-serif"
+```
+
+#### Usage
+
+```js
+import { getFontShorthand } from 'update-input-width';
+```
+
+### `measureText(text: string, font: string)`
+
+A function that given text and font CSS shorthand property returns text width in pixels.
+
+#### Sample result
+
+```js
+42
+```
+
+#### Usage
+
+```js
+import { measureText } from 'update-input-width';
+```
+
 ## License
 
 The MIT License.
