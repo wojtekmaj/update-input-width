@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/update-input-width.svg)](https://www.npmjs.com/package/update-input-width) ![downloads](https://img.shields.io/npm/dt/update-input-width.svg) ![build](https://img.shields.io/travis/wojtekmaj/update-input-width/master.svg)
+
 # Update-Input-Width
 A function that given input element, updates its width to fit its content.
 
