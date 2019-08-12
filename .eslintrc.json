@@ -6,8 +6,6 @@
     "jest": true
   },
   "rules": {
-    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["element"] }],
-    "prefer-destructuring": "warn",
-    "prefer-spread": "warn"
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["element"] }]
   }
 }
