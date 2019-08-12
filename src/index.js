@@ -6,10 +6,17 @@
 export function getFontShorthand(element) {
   const style = window.getComputedStyle(element);
 
-  return (
-    style.font
-    || `${style['font-style']} ${style['font-variant']} ${style['font-weight']} ${style['font-size']}/${style['line-height']} ${style['font-family']}`
-  );
+  if (style.font) {
+    return style.font;
+  }
+
+  const isFontDefined = style['font-family'] !== '';
+
+  if (!isFontDefined) {
+    return '';
+  }
+
+  return `${style['font-style']} ${style['font-variant']} ${style['font-weight']} ${style['font-size']} / ${style['line-height']} ${style['font-family']}`;
 }
 
 /**
