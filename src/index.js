@@ -1,3 +1,8 @@
+const allowedVariants = [
+  'normal',
+  'small-caps',
+];
+
 /**
  * Gets font CSS shorthand property given element.
  *
@@ -16,7 +21,9 @@ export function getFontShorthand(element) {
     return '';
   }
 
-  return `${style['font-style']} ${style['font-variant']} ${style['font-weight']} ${style['font-size']} / ${style['line-height']} ${style['font-family']}`;
+  const fontVariant = allowedVariants.includes(style['font-variant']) ? style['font-variant'] : 'normal';
+
+  return `${style['font-style']} ${fontVariant} ${style['font-weight']} ${style['font-size']} / ${style['line-height']} ${style['font-family']}`;
 }
 
 /**
