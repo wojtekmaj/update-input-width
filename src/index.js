@@ -35,8 +35,15 @@ export function getFontShorthand(element) {
 export function measureText(text, font) {
   const canvas = measureText.canvas || (measureText.canvas = document.createElement('canvas'));
   const context = canvas.getContext('2d');
+
+  // Context type not supported
+  if (!context) {
+    return null;
+  }
+
   context.font = font;
   const { width } = context.measureText(text);
+
   return Math.ceil(width);
 }
 
@@ -52,6 +59,10 @@ export function updateInputWidth(element) {
   const font = getFontShorthand(element);
   const text = element.value || element.placeholder;
   const width = measureText(text, font);
+
+  if (width === null) {
+    return null;
+  }
 
   element.style.width = `${width}px`;
   return width;
