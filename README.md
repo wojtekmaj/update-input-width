@@ -1,7 +1,7 @@
 [![npm](https://img.shields.io/npm/v/update-input-width.svg)](https://www.npmjs.com/package/update-input-width) ![downloads](https://img.shields.io/npm/dt/update-input-width.svg) ![build](https://travis-ci.com/wojtekmaj/update-input-width.svg?branch=master) ![dependencies](https://img.shields.io/david/wojtekmaj/update-input-width.svg) ![dev dependencies](https://img.shields.io/david/dev/wojtekmaj/update-input-width.svg) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 # Update-Input-Width
-A function that given input element, updates its width to fit its content.
+A function that given an input element, updates its width to fit its content.
 
 ## tl;dr
 * Install by executing `npm install update-input-width` or `yarn add update-input-width`.
@@ -12,7 +12,7 @@ A function that given input element, updates its width to fit its content.
 
 ### `updateInputWidth(element: HTMLInputElement)`
 
-A function that given input element, updates its width to fit its content by setting inline `width` CSS property.
+A function that given an input element, updates its width to fit its content by setting inline `width` CSS property.
 
 #### Sample result
 
