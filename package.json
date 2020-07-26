@@ -51,5 +51,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/wojtekmaj/update-input-width.git"
-  }
+  },
+  "funding": "https://github.com/wojtekmaj/update-input-width?sponsor=1"
 }
