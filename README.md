@@ -6,7 +6,7 @@ A function that given an input element, updates its width to fit its content.
 ## tl;dr
 * Install by executing `npm install update-input-width` or `yarn add update-input-width`.
 * Import by adding `import updateInputWidth from 'update-input-width'`.
-* Pass input element to it. Forget.
+* Use it by calling it with input element as an argument.
 
 ## User guide
 
