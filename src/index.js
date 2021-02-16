@@ -29,8 +29,8 @@ export function getFontShorthand(element) {
 /**
  * Measures text width given text and font CSS shorthand.
  *
- * @param {String} text Text to measure
- * @param {String} font Font to use when measuring the text
+ * @param {string} text Text to measure
+ * @param {string} font Font to use when measuring the text
  */
 export function measureText(text, font) {
   const canvas = measureText.canvas || (measureText.canvas = document.createElement('canvas'));
