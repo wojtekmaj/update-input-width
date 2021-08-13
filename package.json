@@ -1,6 +1,6 @@
 {
   "name": "update-input-width",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A function that given input element, updates its width to fit its content.",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
