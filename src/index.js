@@ -9,6 +9,10 @@ const allowedVariants = [
  * @param {HTMLElement} element Element to get font CSS shorthand property from
  */
 export function getFontShorthand(element) {
+  if (!element) {
+    return '';
+  }
+
   const style = window.getComputedStyle(element);
 
   if (style.font) {
@@ -52,7 +56,10 @@ export function measureText(text, font) {
  * @param {HTMLInputElement} element
  */
 export function updateInputWidth(element) {
-  if (typeof window === 'undefined') {
+  if (
+    typeof window === 'undefined'
+    || !element
+  ) {
     return null;
   }
 

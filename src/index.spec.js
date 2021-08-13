@@ -10,6 +10,12 @@ it('exports updateInputWidth() by default', () => {
 });
 
 describe('updateInputWidth()', () => {
+  it('does nothing and returns null when passed nothing', () => {
+    const result = updateInputWidth();
+
+    expect(result).toBe(null);
+  });
+
   it('sets valid width given empty input with placeholder', () => {
     const element = document.createElement('input');
     element.style.fontFamily = 'Arial';
@@ -22,6 +28,12 @@ describe('updateInputWidth()', () => {
 });
 
 describe('getFontShorthand()', () => {
+  it('returns empty string when passed nothing', () => {
+    const result = getFontShorthand();
+
+    expect(result).toBe('');
+  });
+
   it('returns valid font shorthand for a given element', () => {
     const element = document.createElement('input');
     element.style.fontFamily = 'Arial';
