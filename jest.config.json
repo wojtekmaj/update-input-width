@@ -1,0 +1,6 @@
+{
+  "setupFiles": [
+    "jest-canvas-mock"
+  ],
+  "testEnvironment": "jsdom"
+}
