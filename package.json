@@ -48,5 +48,6 @@
     "type": "git",
     "url": "https://github.com/wojtekmaj/update-input-width.git"
   },
-  "funding": "https://github.com/wojtekmaj/update-input-width?sponsor=1"
+  "funding": "https://github.com/wojtekmaj/update-input-width?sponsor=1",
+  "packageManager": "yarn@3.1.0"
 }
