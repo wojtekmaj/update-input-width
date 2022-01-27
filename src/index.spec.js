@@ -1,8 +1,4 @@
-import updateInputWidthDefault, {
-  updateInputWidth,
-  getFontShorthand,
-  measureText,
-} from './index';
+import updateInputWidthDefault, { updateInputWidth, getFontShorthand, measureText } from './index';
 
 it('exports updateInputWidth() by default', () => {
   expect(updateInputWidthDefault).toBeDefined();

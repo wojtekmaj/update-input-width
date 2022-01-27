@@ -1,12 +1,14 @@
 [![npm](https://img.shields.io/npm/v/update-input-width.svg)](https://www.npmjs.com/package/update-input-width) ![downloads](https://img.shields.io/npm/dt/update-input-width.svg) [![CI](https://github.com/wojtekmaj/update-input-width/workflows/CI/badge.svg)](https://github.com/wojtekmaj/update-input-width/actions) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 # Update-Input-Width
+
 A function that given an input element, updates its width to fit its content.
 
 ## tl;dr
-* Install by executing `npm install update-input-width` or `yarn add update-input-width`.
-* Import by adding `import updateInputWidth from 'update-input-width'`.
-* Use it by calling it with input element as an argument.
+
+- Install by executing `npm install update-input-width` or `yarn add update-input-width`.
+- Import by adding `import updateInputWidth from 'update-input-width'`.
+- Use it by calling it with input element as an argument.
 
 ## User guide
 
@@ -17,7 +19,7 @@ A function that given an input element, updates its width to fit its content by 
 #### Sample result
 
 ```js
-42
+42;
 ```
 
 #### Usage
@@ -37,13 +39,13 @@ import { updateInputWidth } from 'update-input-width';
 A function that given HTML element returns font CSS shorthand property. Equal to Chrome-only code:
 
 ```js
-window.getComputedStyle(element).font
+window.getComputedStyle(element).font;
 ```
 
 #### Sample result
 
 ```js
-"normal normal 600 normal 20px / 25px Arial, sans-serif"
+'normal normal 600 normal 20px / 25px Arial, sans-serif';
 ```
 
 #### Usage
@@ -59,7 +61,7 @@ A function that given text and font CSS shorthand property returns text width in
 #### Sample result
 
 ```js
-42
+42;
 ```
 
 #### Usage

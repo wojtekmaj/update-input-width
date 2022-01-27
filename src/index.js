@@ -1,7 +1,4 @@
-const allowedVariants = [
-  'normal',
-  'small-caps',
-];
+const allowedVariants = ['normal', 'small-caps'];
 
 /**
  * Gets font CSS shorthand property given element.
@@ -25,7 +22,9 @@ export function getFontShorthand(element) {
     return '';
   }
 
-  const fontVariant = allowedVariants.includes(style['font-variant']) ? style['font-variant'] : 'normal';
+  const fontVariant = allowedVariants.includes(style['font-variant'])
+    ? style['font-variant']
+    : 'normal';
 
   return `${style['font-style']} ${fontVariant} ${style['font-weight']} ${style['font-size']} / ${style['line-height']} ${style['font-family']}`;
 }
@@ -56,10 +55,7 @@ export function measureText(text, font) {
  * @param {HTMLInputElement} element
  */
 export function updateInputWidth(element) {
-  if (
-    typeof window === 'undefined'
-    || !element
-  ) {
+  if (typeof window === 'undefined' || !element) {
     return null;
   }
 
