@@ -42,7 +42,7 @@ describe('getFontShorthand()', () => {
 
   it('returns valid font shorthand if given font', () => {
     jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      font: 'normal normal 400 20px / 25px Arial',
+      'font': 'normal normal 400 20px / 25px Arial',
       'font-family': 'Arial',
       'font-size': '20px',
       'font-style': 'normal',
@@ -61,7 +61,7 @@ describe('getFontShorthand()', () => {
 
   it('returns valid font shorthand if not given font', () => {
     jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      font: '',
+      'font': '',
       'font-family': 'Arial',
       'font-size': '20px',
       'font-style': 'normal',
@@ -80,7 +80,7 @@ describe('getFontShorthand()', () => {
 
   it('returns valid font shorthand if given allowed font-variant', () => {
     jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      font: '',
+      'font': '',
       'font-family': 'Arial',
       'font-size': '20px',
       'font-style': 'normal',
@@ -99,7 +99,7 @@ describe('getFontShorthand()', () => {
 
   it('returns valid font shorthand if given allowed font-variant', () => {
     jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      font: '',
+      'font': '',
       'font-family': 'Arial',
       'font-size': '20px',
       'font-style': 'normal',
@@ -118,7 +118,7 @@ describe('getFontShorthand()', () => {
 
   it('returns empty string for an element without styles', () => {
     jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      font: '',
+      'font': '',
       'font-family': '',
       'font-size': '',
       'font-style': '',
