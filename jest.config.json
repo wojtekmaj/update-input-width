@@ -1,4 +1,5 @@
 {
+  "reporters": ["default", "github-actions"],
   "setupFiles": ["jest-canvas-mock"],
   "testEnvironment": "jsdom"
 }
