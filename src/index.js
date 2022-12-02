@@ -55,7 +55,7 @@ export function measureText(text, font) {
  * @param {HTMLInputElement} element
  */
 export function updateInputWidth(element) {
-  if (typeof window === 'undefined' || !element) {
+  if (typeof document === 'undefined' || !element) {
     return null;
   }
 
