@@ -5,7 +5,7 @@ const allowedVariants = ['normal', 'small-caps'];
  *
  * @param {HTMLElement} element Element to get font CSS shorthand property from
  */
-export function getFontShorthand(element) {
+export function getFontShorthand(element: HTMLElement): string {
   if (!element) {
     return '';
   }
@@ -16,18 +16,18 @@ export function getFontShorthand(element) {
     return style.font;
   }
 
-  const isFontDefined = style['font-family'] !== '';
+  const isFontDefined = style.fontFamily !== '';
 
   if (!isFontDefined) {
     return '';
   }
 
-  const fontVariant = allowedVariants.includes(style['font-variant'])
-    ? style['font-variant']
-    : 'normal';
+  const fontVariant = allowedVariants.includes(style.fontVariant) ? style.fontVariant : 'normal';
 
-  return `${style['font-style']} ${fontVariant} ${style['font-weight']} ${style['font-size']} / ${style['line-height']} ${style['font-family']}`;
+  return `${style.fontStyle} ${fontVariant} ${style.fontWeight} ${style.fontSize} / ${style.lineHeight} ${style.fontFamily}`;
 }
+
+let cachedCanvas: HTMLCanvasElement;
 
 /**
  * Measures text width given text and font CSS shorthand.
@@ -35,8 +35,9 @@ export function getFontShorthand(element) {
  * @param {string} text Text to measure
  * @param {string} font Font to use when measuring the text
  */
-export function measureText(text, font) {
-  const canvas = measureText.canvas || (measureText.canvas = document.createElement('canvas'));
+export function measureText(text: string, font: string) {
+  const canvas: HTMLCanvasElement =
+    cachedCanvas || (cachedCanvas = document.createElement('canvas'));
   const context = canvas.getContext('2d');
 
   // Context type not supported
@@ -54,7 +55,7 @@ export function measureText(text, font) {
  * Updates input element width to fit its content given input element
  * @param {HTMLInputElement} element
  */
-export function updateInputWidth(element) {
+export function updateInputWidth(element: HTMLInputElement) {
   if (typeof document === 'undefined' || !element) {
     return null;
   }
