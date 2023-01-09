@@ -7,6 +7,7 @@ it('exports updateInputWidth() by default', () => {
 
 describe('updateInputWidth()', () => {
   it('does nothing and returns null when passed nothing', () => {
+    // @ts-expect-error-next-line
     const result = updateInputWidth();
 
     expect(result).toBe(null);
@@ -25,6 +26,7 @@ describe('updateInputWidth()', () => {
 
 describe('getFontShorthand()', () => {
   it('returns empty string when passed nothing', () => {
+    // @ts-expect-error-next-line
     const result = getFontShorthand();
 
     expect(result).toBe('');
@@ -41,98 +43,113 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns valid font shorthand if given font', () => {
-    jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      'font': 'normal normal 400 20px / 25px Arial',
-      'font-family': 'Arial',
-      'font-size': '20px',
-      'font-style': 'normal',
-      'font-variant': 'normal',
-      'font-weight': '400',
-      'line-height': '25px',
-    }));
+    const mockGetComputedStyle = jest.spyOn(global.window, 'getComputedStyle');
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockImplementation(
+      () => ({
+        font: 'normal normal 400 20px / 25px Arial',
+        fontFamily: 'Arial',
+        fontSize: '20px',
+        fontStyle: 'normal',
+        fontVariant: 'normal',
+        fontWeight: '400',
+        lineHeight: '25px',
+      }),
+    );
 
     const element = document.createElement('input');
     const result = getFontShorthand(element);
 
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
-    global.window.getComputedStyle.mockClear();
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockClear();
   });
 
   it('returns valid font shorthand if not given font', () => {
-    jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      'font': '',
-      'font-family': 'Arial',
-      'font-size': '20px',
-      'font-style': 'normal',
-      'font-variant': 'normal',
-      'font-weight': '400',
-      'line-height': '25px',
-    }));
+    const mockGetComputedStyle = jest.spyOn(global.window, 'getComputedStyle');
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockImplementation(
+      () => ({
+        font: '',
+        fontFamily: 'Arial',
+        fontSize: '20px',
+        fontStyle: 'normal',
+        fontVariant: 'normal',
+        fontWeight: '400',
+        lineHeight: '25px',
+      }),
+    );
 
     const element = document.createElement('input');
     const result = getFontShorthand(element);
 
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
-    global.window.getComputedStyle.mockClear();
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockClear();
   });
 
   it('returns valid font shorthand if given allowed font-variant', () => {
-    jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      'font': '',
-      'font-family': 'Arial',
-      'font-size': '20px',
-      'font-style': 'normal',
-      'font-variant': 'small-caps',
-      'font-weight': '400',
-      'line-height': '25px',
-    }));
+    const mockGetComputedStyle = jest.spyOn(global.window, 'getComputedStyle');
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockImplementation(
+      () => ({
+        font: '',
+        fontFamily: 'Arial',
+        fontSize: '20px',
+        fontStyle: 'normal',
+        fontVariant: 'small-caps',
+        fontWeight: '400',
+        lineHeight: '25px',
+      }),
+    );
 
     const element = document.createElement('input');
     const result = getFontShorthand(element);
 
     expect(result).toBe('normal small-caps 400 20px / 25px Arial');
 
-    global.window.getComputedStyle.mockClear();
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockClear();
   });
 
   it('returns valid font shorthand if given allowed font-variant', () => {
-    jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      'font': '',
-      'font-family': 'Arial',
-      'font-size': '20px',
-      'font-style': 'normal',
-      'font-variant': 'tabular-nums',
-      'font-weight': '400',
-      'line-height': '25px',
-    }));
+    const mockGetComputedStyle = jest.spyOn(global.window, 'getComputedStyle');
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockImplementation(
+      () => ({
+        font: '',
+        fontFamily: 'Arial',
+        fontSize: '20px',
+        fontStyle: 'normal',
+        fontVariant: 'tabular-nums',
+        fontWeight: '400',
+        lineHeight: '25px',
+      }),
+    );
 
     const element = document.createElement('input');
     const result = getFontShorthand(element);
 
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
-    global.window.getComputedStyle.mockClear();
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockClear();
   });
 
   it('returns empty string for an element without styles', () => {
-    jest.spyOn(global.window, 'getComputedStyle').mockImplementation(() => ({
-      'font': '',
-      'font-family': '',
-      'font-size': '',
-      'font-style': '',
-      'font-variant': '',
-      'font-weight': '',
-      'line-height': '',
-    }));
+    const mockGetComputedStyle = jest.spyOn(global.window, 'getComputedStyle');
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockImplementation(
+      () => ({
+        font: '',
+        fontFamily: '',
+        fontSize: '',
+        fontStyle: '',
+        fontVariant: '',
+        fontWeight: '',
+        lineHeight: '',
+      }),
+    );
 
     const element = document.createElement('input');
     const result = getFontShorthand(element);
 
     expect(result).toBe('');
 
-    global.window.getComputedStyle.mockClear();
+    (mockGetComputedStyle as jest.SpyInstance<Partial<CSSStyleDeclaration>>).mockClear();
   });
 });
 
