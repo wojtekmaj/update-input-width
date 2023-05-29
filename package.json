@@ -1,6 +1,6 @@
 {
   "name": "update-input-width",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A function that given input element, updates its width to fit its content.",
   "type": "module",
   "sideEffects": false,
