@@ -1,5 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
-import updateInputWidthDefault, { updateInputWidth, getFontShorthand, measureText } from './index';
+import updateInputWidthDefault, {
+  updateInputWidth,
+  getFontShorthand,
+  measureText,
+} from './index.js';
 
 import type { SpyInstance } from 'vitest';
 
