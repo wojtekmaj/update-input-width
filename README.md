@@ -16,58 +16,48 @@ A function that given an input element, updates its width to fit its content.
 
 A function that given an input element, updates its width to fit its content by setting inline `width` CSS property.
 
-#### Sample result
+#### Sample usage
 
-```js
-42;
-```
-
-#### Usage
-
-```js
+```ts
 import updateInputWidth from 'update-input-width';
+
+updateInputWidth(myInput); // 42
 ```
 
 or
 
-```js
+```ts
 import { updateInputWidth } from 'update-input-width';
+
+updateInputWidth(myInput); // 42
 ```
 
 ### `getFontShorthand(element: HTMLElement)`
 
 A function that given HTML element returns font CSS shorthand property. Equal to Chrome-only code:
 
-```js
+```ts
 window.getComputedStyle(element).font;
 ```
 
-#### Sample result
+#### Sample usage
 
-```js
-'normal normal 600 normal 20px / 25px Arial, sans-serif';
-```
-
-#### Usage
-
-```js
+```ts
 import { getFontShorthand } from 'update-input-width';
+
+getFontShorthand(myInput); // 'normal normal 600 normal 20px / 25px Arial, sans-serif'
 ```
 
 ### `measureText(text: string, font: string)`
 
 A function that given text and font CSS shorthand property returns text width in pixels.
 
-#### Sample result
+#### Sample usage
 
-```js
-42;
-```
-
-#### Usage
-
-```js
+```ts
 import { measureText } from 'update-input-width';
+
+measureText('hello', 'normal normal 600 normal 20px / 25px Arial, sans-serif'); // 42
 ```
 
 ## License
