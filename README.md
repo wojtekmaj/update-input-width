@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/update-input-width.svg)](https://www.npmjs.com/package/update-input-width) ![downloads](https://img.shields.io/npm/dt/update-input-width.svg) [![CI](https://github.com/wojtekmaj/update-input-width/workflows/CI/badge.svg)](https://github.com/wojtekmaj/update-input-width/actions)
+[![npm](https://img.shields.io/npm/v/update-input-width.svg)](https://www.npmjs.com/package/update-input-width) ![downloads](https://img.shields.io/npm/dt/update-input-width.svg) [![CI](https://github.com/wojtekmaj/update-input-width/actions/workflows/ci.yml/badge.svg)](https://github.com/wojtekmaj/update-input-width/actions)
 
 # Update-Input-Width
 
