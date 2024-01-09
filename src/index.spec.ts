@@ -6,7 +6,7 @@ import updateInputWidthDefault, {
   measureText,
 } from './index.js';
 
-import type { SpyInstance } from 'vitest';
+import type { MockInstance } from 'vitest';
 
 it('exports updateInputWidth() by default', () => {
   expect(updateInputWidthDefault).toBeDefined();
@@ -53,7 +53,7 @@ describe('getFontShorthand()', () => {
   it('returns valid font shorthand if given font', () => {
     const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -73,7 +73,7 @@ describe('getFontShorthand()', () => {
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -83,7 +83,7 @@ describe('getFontShorthand()', () => {
   it('returns valid font shorthand if not given font', () => {
     const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -103,7 +103,7 @@ describe('getFontShorthand()', () => {
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -113,7 +113,7 @@ describe('getFontShorthand()', () => {
   it('returns valid font shorthand if given allowed font-variant', () => {
     const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -133,7 +133,7 @@ describe('getFontShorthand()', () => {
     expect(result).toBe('normal small-caps 400 20px / 25px Arial');
 
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -143,7 +143,7 @@ describe('getFontShorthand()', () => {
   it('returns valid font shorthand if given allowed font-variant', () => {
     const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -163,7 +163,7 @@ describe('getFontShorthand()', () => {
     expect(result).toBe('normal normal 400 20px / 25px Arial');
 
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -173,7 +173,7 @@ describe('getFontShorthand()', () => {
   it('returns empty string for an element without styles', () => {
     const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
@@ -193,7 +193,7 @@ describe('getFontShorthand()', () => {
     expect(result).toBe('');
 
     (
-      mockGetComputedStyle as SpyInstance<
+      mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
         Partial<CSSStyleDeclaration>
       >
