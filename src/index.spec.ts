@@ -51,7 +51,7 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns valid font shorthand if given font', () => {
-    const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
+    const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
@@ -81,7 +81,7 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns valid font shorthand if not given font', () => {
-    const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
+    const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
@@ -111,7 +111,7 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns valid font shorthand if given allowed font-variant', () => {
-    const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
+    const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
@@ -141,7 +141,7 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns valid font shorthand if given allowed font-variant', () => {
-    const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
+    const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
@@ -171,7 +171,7 @@ describe('getFontShorthand()', () => {
   });
 
   it('returns empty string for an element without styles', () => {
-    const mockGetComputedStyle = vi.spyOn(global.window, 'getComputedStyle');
+    const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
         [elt: Element, pseudoElt?: string | null | undefined],
