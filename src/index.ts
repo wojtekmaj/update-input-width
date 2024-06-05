@@ -29,6 +29,14 @@ export function getFontShorthand(element: HTMLElement): string {
 
 let cachedCanvas: HTMLCanvasElement;
 
+function getCanvas() {
+  if (!cachedCanvas) {
+    cachedCanvas = document.createElement('canvas');
+  }
+
+  return cachedCanvas;
+}
+
 /**
  * Measures text width given text and font CSS shorthand.
  *
@@ -36,8 +44,7 @@ let cachedCanvas: HTMLCanvasElement;
  * @param {string} font Font to use when measuring the text
  */
 export function measureText(text: string, font: string) {
-  const canvas: HTMLCanvasElement =
-    cachedCanvas || (cachedCanvas = document.createElement('canvas'));
+  const canvas = getCanvas();
   const context = canvas.getContext('2d');
 
   // Context type not supported
