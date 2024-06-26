@@ -42,6 +42,7 @@ function getCanvas() {
  *
  * @param {string} text Text to measure
  * @param {string} font Font to use when measuring the text
+ * @returns {number | null} Width of the text
  */
 export function measureText(text: string, font: string): number | null {
   const canvas = getCanvas();
@@ -61,6 +62,7 @@ export function measureText(text: string, font: string): number | null {
 /**
  * Updates input element width to fit its content given input element
  * @param {HTMLInputElement} element
+ * @returns {number | null} Width of the input element
  */
 export function updateInputWidth(element: HTMLInputElement): number | null {
   if (typeof document === 'undefined' || !element) {
