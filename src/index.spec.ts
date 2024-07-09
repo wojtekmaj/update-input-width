@@ -54,8 +54,7 @@ describe('getFontShorthand()', () => {
     const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockImplementation(() => ({
       font: 'normal normal 400 20px / 25px Arial',
@@ -74,8 +73,7 @@ describe('getFontShorthand()', () => {
 
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockClear();
   });
@@ -84,8 +82,7 @@ describe('getFontShorthand()', () => {
     const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockImplementation(() => ({
       font: '',
@@ -104,8 +101,7 @@ describe('getFontShorthand()', () => {
 
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockClear();
   });
@@ -114,8 +110,7 @@ describe('getFontShorthand()', () => {
     const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockImplementation(() => ({
       font: '',
@@ -134,8 +129,7 @@ describe('getFontShorthand()', () => {
 
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockClear();
   });
@@ -144,8 +138,7 @@ describe('getFontShorthand()', () => {
     const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockImplementation(() => ({
       font: '',
@@ -164,8 +157,7 @@ describe('getFontShorthand()', () => {
 
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockClear();
   });
@@ -174,8 +166,7 @@ describe('getFontShorthand()', () => {
     const mockGetComputedStyle = vi.spyOn(globalThis.window, 'getComputedStyle');
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockImplementation(() => ({
       font: '',
@@ -194,8 +185,7 @@ describe('getFontShorthand()', () => {
 
     (
       mockGetComputedStyle as MockInstance<
-        [elt: Element, pseudoElt?: string | null | undefined],
-        Partial<CSSStyleDeclaration>
+        (elt: Element, pseudoElt?: string | null | undefined) => Partial<CSSStyleDeclaration>
       >
     ).mockClear();
   });
