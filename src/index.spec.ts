@@ -1,9 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import updateInputWidthDefault, {
-  updateInputWidth,
   getFontShorthand,
   measureText,
+  updateInputWidth,
 } from './index.js';
 
 import type { MockInstance } from 'vitest';
